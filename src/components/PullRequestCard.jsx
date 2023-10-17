@@ -1,12 +1,10 @@
-import classNames from "classnames";
 import IconNumber from "../assets/icons/icon-number.svg";
-import IconComment from "../assets/icons/icon-comment.svg";
 import IconRedirect from "../assets/icons/icon-redirect.svg";
-import { useCommentsApi } from "../hooks";
 import { useCallback } from "react";
 import { REPO_OWNER, REPO_NAME } from "../utils/constants";
+import { InfoNode } from "./InfoNode";
+import { CommentNode } from "./CommentNode";
 
-/* eslint-disable react/prop-types */
 export const PullRequestCard = ({ title, number, user }) => {
   // console.log("PullRequestCard: ", number);
 
@@ -35,24 +33,4 @@ export const PullRequestCard = ({ title, number, user }) => {
       </div>
     </div>
   );
-};
-
-const InfoNode = ({ icon, iconClassName, label }) => {
-  return (
-    <div className="px-4 flex items-center gap-4">
-      <img
-        className={classNames(
-          "rounded-full w-6 h-6 bg-gray-100",
-          iconClassName
-        )}
-        src={icon}
-      />
-      <label>{label}</label>
-    </div>
-  );
-};
-
-const CommentNode = ({ pullNumber }) => {
-  const { count } = useCommentsApi(pullNumber);
-  return <InfoNode icon={IconComment} iconClassName="" label={count} />;
 };
