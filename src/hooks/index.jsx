@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Octokit } from "@octokit/core";
-import { GITHUB_ACCESS_TOKEN, REPO_NAME, REPO_OWNER } from "../utils/constants";
+import { REPO_NAME, REPO_OWNER } from "../utils/constants";
 
 export const usePullRequestsApi = () => {
   const [loading, toggleLoading] = useState(true);
@@ -8,7 +8,7 @@ export const usePullRequestsApi = () => {
 
   useEffect(() => {
     const octokit = new Octokit({
-      auth: GITHUB_ACCESS_TOKEN,
+      auth: import.meta.env.VITE_GITHUB_ACCESS_TOKEN,
     });
     octokit
       .request("GET /repos/{owner}/{repo}/pulls", {
@@ -34,7 +34,7 @@ export const useCommentsApi = (pull_number) => {
 
   useEffect(() => {
     const octokit = new Octokit({
-      auth: GITHUB_ACCESS_TOKEN,
+      auth: import.meta.env.VITE_GITHUB_ACCESS_TOKEN,
     });
 
     const fetchIssueComments = async () => {
