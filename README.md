@@ -10,8 +10,8 @@ This project uses Github API to fetch pull requests and shows in a Grid list. It
 To start the project, use below commands:
 
 1. yarn install (or npm install)
-2. Create .env file in project root directory
-3. Add following line to .env file
+2. Create `.env` file in project root directory
+3. Add following line to `.env` file
 
    ```
    VITE_GITHUB_ACCESS_TOKEN = <github-token>
