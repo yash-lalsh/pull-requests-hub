@@ -1,8 +1,17 @@
-# React + Vite
+# Pull Requests Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project uses Github API to fetch pull requests and shows in a Grid list. It shows following information about Pull Request:
 
-Currently, two official plugins are available:
+- Name of PR
+- Author avatar and name
+- PR Number
+- Total Number of comments
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies used:
+
+- React
+- Tailwind CSS
+- Vite (build system)
+
+Notes:
+As per Github docs, to get total number of comments for a PR, we need to fetch it from 2 endpoints, /repos/{owner}/{repo}/issues/{pull_number}/comments and /repos/{owner}/{repo}/pulls/{pull_number}/comments. This project shows total comments count (combined from both endpoints).
