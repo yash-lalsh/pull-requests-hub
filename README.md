@@ -13,8 +13,12 @@ To start the project, use below commands:
 2. yarn dev (or npm run dev)
 3. Create .env file in project root directory
 4. Add following line to .env file
-   `VITE_GITHUB_ACCESS_TOKEN = <github-token>`
-5. Replace <github-token> with the access token that I have sent in email
+
+   ```VITE_GITHUB_ACCESS_TOKEN = <github-token>
+
+   ```
+
+5. Replace `<github-token>` with the access token that I have sent in email
 
 This project is hosted at:
 https://pull-requests-hub.vercel.app/
