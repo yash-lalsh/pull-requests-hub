@@ -16,6 +16,9 @@ To start the project, use below commands:
    `VITE_GITHUB_ACCESS_TOKEN = <github-token>`
 5. Replace <github-token> with the access token that I have sent in email
 
+This project is hosted at:
+https://pull-requests-hub.vercel.app/
+
 Technologies used:
 
 - React
