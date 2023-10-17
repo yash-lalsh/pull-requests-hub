@@ -10,15 +10,15 @@ This project uses Github API to fetch pull requests and shows in a Grid list. It
 To start the project, use below commands:
 
 1. yarn install (or npm install)
-2. yarn dev (or npm run dev)
-3. Create .env file in project root directory
-4. Add following line to .env file
+2. Create .env file in project root directory
+3. Add following line to .env file
 
    ```
    VITE_GITHUB_ACCESS_TOKEN = <github-token>
    ```
 
-5. Replace `<github-token>` with the access token that I have sent in email
+4. Replace `<github-token>` with the access token that I have sent in email
+5. yarn dev (or npm run dev)
 
 This project is hosted at:
 https://pull-requests-hub.vercel.app/
